@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Mario Mini</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-screen">
+      <header class="hud">
+        <div><strong>نام بازی:</strong> Super Mario Mini</div>
+        <div><strong>بازیکن:</strong> Player 1</div>
+        <div><strong>امتیاز:</strong> <span id="score">0</span></div>
+      </header>
+
+      <main class="game-area" aria-label="بخش اصلی بازی">
+        <div id="mario" class="mario" aria-label="کاراکتر سوپرماریو">🍄</div>
+      </main>
+
+      <footer class="ground" aria-label="زمین بازی (چمن)"></footer>
+    </div>
+
+    <div class="controls-note">برای حرکت از کلیدهای ◀ ▶ یا دکمه‌های جهت روی صفحه استفاده کنید.</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
