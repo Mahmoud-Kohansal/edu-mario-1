@@ -1,0 +1,73 @@
+:root {
+  --hud-height: 10vh;
+  --game-height: 70vh;
+  --ground-height: 20vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Tahoma, Arial, sans-serif;
+  background: #87ceeb;
+  color: #222;
+}
+
+.game-screen {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hud {
+  height: var(--hud-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #1f2937;
+  color: #f9fafb;
+  border-bottom: 2px solid #111827;
+  font-size: clamp(12px, 1.8vw, 18px);
+}
+
+.game-area {
+  height: var(--game-height);
+  position: relative;
+  background: linear-gradient(to bottom, #8ed6ff 0%, #cbefff 100%);
+}
+
+.ground {
+  height: var(--ground-height);
+  background: repeating-linear-gradient(
+    45deg,
+    #32cd32,
+    #32cd32 10px,
+    #2fb32f 10px,
+    #2fb32f 20px
+  );
+  border-top: 4px solid #1d7f1d;
+}
+
+.mario {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(36px, 6vw, 56px);
+  line-height: 1;
+  user-select: none;
+  transition: left 0.08s linear;
+}
+
+.controls-note {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 8px;
+  text-align: center;
+  font-size: 13px;
+  color: #111827;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 4px 8px;
+}
